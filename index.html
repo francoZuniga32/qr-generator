@@ -23,7 +23,7 @@ function obtenerParametroGET(nombre) {
         }
 
         // Obtén el valor del parámetro GET "data"
-const dataParam = obtenerParametroGET("data");
+const dataParam = decodeURI(obtenerParametroGET("data"));
 
 function makeCode () {		
 	qrcode.makeCode(dataParam);
