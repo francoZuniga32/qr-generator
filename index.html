@@ -27,6 +27,7 @@ const dataParam = decodeURI(obtenerParametroGET("data"));
 
 function makeCode () {		
 	qrcode.makeCode(dataParam);
+	window.open(document.getElementById("qrcode").children[1])
 }
 
 makeCode();
