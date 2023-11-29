@@ -28,7 +28,7 @@ const dataParam = decodeURI(obtenerParametroGET("data"));
 function makeCode () {		
 	qrcode.makeCode(dataParam);
 	var base64 = "";
-	while(base64 != "") {
+	while(base64 == "") {
 		base64 = document.getElementById("qrcode").children[1].src.split(",")[1];
 	}
 	var a = document.createElement("a"); //Create <a>
